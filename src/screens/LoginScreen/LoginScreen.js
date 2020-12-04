@@ -4,9 +4,7 @@ import { Button } from 'common';
 
 import AsyncStorage from 'react-native';
 
-const LoginScreen = ({navigation}) => {
-
-
+const LoginScreen = () => {
 
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
