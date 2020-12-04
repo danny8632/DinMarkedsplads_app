@@ -20,9 +20,11 @@
                 ],
                 "alias": {
                     "common"        : "./src/common",
+                    "constants"     : "./src/constants",
                     "theme"         : "./src/theme",
                     "navigation"    : "./src/navigation",
-                    "screens"       : "./src/screens"
+                    "screens"       : "./src/screens",
+                    "assets"        : "./src/assets"
                 }
             }
         ]

@@ -1,7 +1,7 @@
 import HomeScreen from './HomeScreen/Homescreen';
-import DetailScreen from './DetailScreen/DetailScreen';
+import PostScreen from './PostScreen/PostScreen';
 
 export {
   HomeScreen,
-  DetailScreen
+  PostScreen
 };

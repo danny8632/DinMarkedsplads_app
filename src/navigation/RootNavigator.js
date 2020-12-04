@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { HomeScreen, DetailScreen } from 'screens';
-import { NAVIGATION_TO_HOME_SCREEN, NAVIGATION_TO_DETAIL_SCREEN } from 'navigation/routes';
+import { HomeScreen, PostScreen } from 'screens';
+import { NAVIGATION_TO_HOME_SCREEN, NAVIGATION_TO_POST_SCREEN } from 'navigation/routes';
 
 import { ThemeContext } from 'theme';
 
@@ -23,7 +23,7 @@ const StackNavigator = () => {
                 headerTintColor: theme.appbar.tintColor,    
             }}>
             <Stack.Screen name={NAVIGATION_TO_HOME_SCREEN} component={HomeScreen} options={{ title: "Home" }} />
-            <Stack.Screen name={NAVIGATION_TO_DETAIL_SCREEN} component={DetailScreen} options={{ title: "Details" }} />
+            <Stack.Screen name={NAVIGATION_TO_POST_SCREEN} component={PostScreen} options={{ title: "Post" }} />
         </Stack.Navigator>
     );
 };

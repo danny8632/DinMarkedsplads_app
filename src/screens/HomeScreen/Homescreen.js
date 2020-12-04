@@ -1,31 +1,25 @@
 import React, { useContext } from 'react';
-import { StyleSheet, ScrollView, View, Switch, Text } from 'react-native';
-import Button from 'common/Button';
+import { StyleSheet, ScrollView, SafeAreaView } from 'react-native';
+import {PostFeed} from 'common';
 import { ThemeContext } from 'theme';
-import { NAVIGATION_TO_DETAIL_SCREEN } from 'navigation/routes';
+
+import Posts from 'constants/Posts';
 
 const HomeScreen = ({navigation}) => {
 
-    const { theme, setTheme } = useContext(ThemeContext);
+    /* console.log(Posts) */
 
     return (
-        <ScrollView>
-            <View>
-                <Text>gang gang</Text>
-
-                <Button title="Details gang gang" onPress={() => navigation.navigate(NAVIGATION_TO_DETAIL_SCREEN)} />
-
-                <Text>We made it boys</Text>
-            </View>
-        </ScrollView>
+        <SafeAreaView style={styles.container}>
+			<PostFeed posts={Posts} navigation={navigation}/>
+		</SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
-    container: theme => ({
-        flex: 1,
-        backgroundColor: theme.backgroundColor,
-    }),
+    container : {
+        flex: 1
+    }
 });
 
 export default HomeScreen;
