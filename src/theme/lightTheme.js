@@ -8,15 +8,15 @@ export default {
 
     transparent: 'transparent',
 
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#93BAE8',
 
     surfaceColor: '#fff',
 
     borderColor: '#d9d9d9',
 
-    primaryLightColor: '#66ffff',
-    primaryColor: '#00d3d6',
-    primaryDarkColor: '#00a1a5',
+    primaryLightColor: '#6599D7',
+    primaryColor: '#437FC7',
+    primaryDarkColor: '#2567B8',
 
     disabledColor: '#E3E6E8',
     disabledDarkColor: '#99A1A8',
@@ -32,7 +32,7 @@ export default {
     errorColor: '#ff190c',
 
     appbar: {
-      statusBarColor: '#00a1a5',
+      statusBarColor: '#437FC7',
       barStyle: 'light-content',
       backgroundColor: '#00d3d6',
       tintColor: '#fff',

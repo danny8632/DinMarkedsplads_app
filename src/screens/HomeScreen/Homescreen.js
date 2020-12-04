@@ -1,13 +1,11 @@
 import React, { useContext } from 'react';
 import { StyleSheet, ScrollView, SafeAreaView } from 'react-native';
-import {PostFeed} from 'common';
+import { PostFeed } from 'common';
 import { ThemeContext } from 'theme';
 
-import Posts from 'constants/Posts';
+import { Posts } from 'constants';
 
 const HomeScreen = ({navigation}) => {
-
-    /* console.log(Posts) */
 
     return (
         <SafeAreaView style={styles.container}>

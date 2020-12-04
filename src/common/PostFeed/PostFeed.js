@@ -1,11 +1,9 @@
 import React, { useContext } from 'react';
 import { ScrollView, Text } from 'react-native';
 
-import PostWrapper from 'common/PostWrapper/PostWrapper';
+import { PostWrapper } from 'common';
 
 const PostFeed = ({ posts, navigation }) => {
-
-    console.log(posts)
 
     if(typeof posts === "undefined" || posts.length === 0)
     {
