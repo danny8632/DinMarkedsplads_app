@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { HomeScreen, PostScreen, SearchScreen } from 'screens';
-import { NAVIGATION_TO_HOME_SCREEN, NAVIGATION_TO_POST_SCREEN, NAVIGATION_TO_SEARCH_SCREEN } from 'navigation/routes';
+import { HomeScreen, PostScreen, SearchScreen, LoginScreen } from 'screens';
+import { NAVIGATION_TO_HOME_SCREEN, NAVIGATION_TO_POST_SCREEN, NAVIGATION_TO_SEARCH_SCREEN, NAVIGATION_TO_LOGIN_SCREEN } from 'navigation/routes';
 
 import { ThemeContext } from 'theme';
 
@@ -28,6 +28,26 @@ const StackNavigator = () => {
     );
 };
 
+
+const LoginStack = createStackNavigator();
+
+const LoginNavigator = () => {
+    const { theme } = useContext(ThemeContext);
+
+    return (
+        <LoginStack.Navigator 
+            screenOptions={{
+                headerStyle: { backgroundColor: theme.primaryColor },
+                headerBackTitle: null,
+                headerTintColor: theme.appbar.tintColor 
+            }
+        }>
+            <Stack.Screen name={NAVIGATION_TO_LOGIN_SCREEN} component={LoginScreen} options={{ title: "Login" }} />
+        </LoginStack.Navigator>
+    )
+}
+
+
 const Tab = createBottomTabNavigator();
 
 const RootNavigator = () => {
@@ -40,8 +60,9 @@ const RootNavigator = () => {
                 backgroundColor={theme.appbar.statusBarColor}
             />
             <Tab.Navigator initialRouteName={NAVIGATION_TO_HOME_SCREEN}>
-                <Tab.Screen name={NAVIGATION_TO_HOME_SCREEN} component={StackNavigator} />
-                <Tab.Screen name={NAVIGATION_TO_SEARCH_SCREEN} component={SearchScreen} />
+                <Tab.Screen name="Home" component={StackNavigator} />
+                <Tab.Screen name="Search" component={SearchScreen} />
+                <Tab.Screen name="Login" component={LoginNavigator} />
             </Tab.Navigator>
         </NavigationContainer>
     );
